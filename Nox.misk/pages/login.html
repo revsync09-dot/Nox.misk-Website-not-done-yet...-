@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login – No.misk</title>
+    <meta name="description" content="Login für No.misk (Frontend-Demo ohne Backend)." />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/login.js"></script>
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html" aria-label="Zurück zur Startseite">
+          <span class="brand-mark" aria-hidden="true">No</span><span class="brand-dot">.</span><span class="brand-name">misk</span>
+        </a>
+        <nav class="nav" aria-label="Login Navigation">
+          <ul class="nav-list">
+            <li><a href="../index.html#kategorien">Kategorien</a></li>
+            <li><a href="../index.html#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Login</h2>
+          <p class="muted">Frontend-Demo: Login-Status wird im Browser gespeichert (kein Server).</p>
+        </div>
+
+        <div class="newsletter">
+          <form data-login-form>
+            <div class="field">
+              <label for="email">E-Mail</label>
+              <input id="email" name="email" type="email" required placeholder="name@email.com" />
+            </div>
+            <div class="field">
+              <label for="password">Passwort</label>
+              <input id="password" name="password" type="password" required placeholder="••••••••" minlength="6" />
+            </div>
+            <div class="field">
+              <label class="checkbox">
+                <input type="checkbox" name="remember" checked />
+                <span>Eingeloggt bleiben</span>
+              </label>
+            </div>
+            <div class="hero-cta">
+              <button class="btn" type="submit">Einloggen</button>
+              <a class="btn btn-ghost" href="../index.html">Abbrechen</a>
+            </div>
+          </form>
+          <p class="fineprint">
+            Tipp: Später kann hier eine echte Auth (Firebase, Supabase, eigenes Backend) angebunden werden.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand brand-footer">
+            <span class="brand-mark" aria-hidden="true">No</span><span class="brand-dot">.</span><span class="brand-name">misk</span>
+          </div>
+          <p class="muted">Humboldtstraße 48, 4020 Linz</p>
+        </div>
+        <div>
+          <h3>Rechtliches</h3>
+          <ul class="footer-links">
+            <li><a href="./nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
+            <li><a href="./datenschutz.html">Datenschutzerklärung</a></li>
+            <li><a href="./rechtinformationen.html">Rechtinformationen</a></li>
+            <li><button class="linklike" type="button" data-open-cookie-settings>Cookie-Einstellungen</button></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank" rel="noreferrer" data-social="tiktok">TikTok</a></li>
+            <li><a href="#" target="_blank" rel="noreferrer" data-social="snapchat">Snapchat</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <small>© <span data-year></span> No.misk</small>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true" hidden data-toast></div>
+
+    <section class="cookie-banner" role="dialog" aria-label="Cookie Hinweis" aria-modal="true" hidden data-cookie-banner>
+      <div class="cookie-inner">
+        <h2>Cookies</h2>
+        <p class="muted">
+          Wir verwenden Cookies/Local Storage für Login-Status, Einstellungen und Favoriten (Demo). Du kannst entscheiden, ob du
+          alles akzeptierst oder nur notwendige Einstellungen erlaubst.
+        </p>
+        <div class="cookie-actions">
+          <button class="btn btn-ghost" type="button" data-cookie-necessary>Nur notwendig</button>
+          <button class="btn" type="button" data-cookie-accept>Akzeptieren</button>
+        </div>
+        <p class="fineprint">
+          Mehr Infos in der <a href="./datenschutz.html">Datenschutzerklärung</a>.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

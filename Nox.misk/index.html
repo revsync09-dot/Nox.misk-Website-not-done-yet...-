@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>No.misk – Parfümerie in Linz</title>
+    <meta
+      name="description"
+      content="No.misk – Parfümerie in Linz. Entdecke exklusive Düfte, Kategorien und Neuheiten. Newsletter & Login verfügbar."
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Inhalt</a>
+
+    <header class="site-header" role="banner">
+      <div class="announcement" role="region" aria-label="Hinweis">
+        <div class="container announcement-inner">
+          <span class="badge">Neu</span>
+          <span>Abonniere den Newsletter und erhalte Updates zu neuen Düften & Drops.</span>
+          <a class="announcement-link" href="#newsletter">Jetzt anmelden</a>
+        </div>
+      </div>
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="No.misk Startseite">
+          <span class="brand-mark" aria-hidden="true">No</span><span class="brand-dot">.</span><span class="brand-name">misk</span>
+        </a>
+
+        <nav class="nav" aria-label="Hauptnavigation">
+          <button class="nav-toggle" type="button" data-nav-toggle aria-label="Menü öffnen">
+            <span aria-hidden="true">Menü</span>
+          </button>
+          <ul class="nav-list" data-nav>
+            <li><a href="#kategorien">Kategorien</a></li>
+            <li><a href="#neuheiten">Neuheiten</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li class="nav-auth">
+              <a class="btn btn-ghost" href="./pages/login.html" data-auth-link>Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="Hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Parfümerie · Linz</p>
+            <h1>Exklusive Düfte. Klarer Stil. <span class="accent">No.misk</span>.</h1>
+            <p class="lead">
+              Entdecke ausgewählte Parfüms für <strong>Women</strong>, <strong>Men</strong> und <strong>Unisex</strong>.
+              Filtere nach Kategorien, speichere Favoriten und bleib über Neuheiten informiert.
+            </p>
+            <div class="hero-cta">
+              <a class="btn" href="#kategorien">Kategorien ansehen</a>
+              <a class="btn btn-ghost" href="#kontakt">Standort</a>
+            </div>
+            <div class="hero-meta">
+              <div class="meta-pill">
+                <span class="meta-k">Telefon</span>
+                <a class="meta-v" href="tel:+4368181228794">0681 81228794</a>
+              </div>
+              <div class="meta-pill">
+                <span class="meta-k">Adresse</span>
+                <span class="meta-v">Humboldtstraße 48, 4020 Linz</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Bildplatzhalter">
+            <div class="image-placeholder">
+              <p>
+                Platzhalter für Fotos<br />
+                <span class="muted">(du kannst später deine Produktbilder einsetzen)</span>
+              </p>
+            </div>
+            <div class="hero-cards" aria-label="Highlights">
+              <article class="mini-card">
+                <h3>Oud & Amber</h3>
+                <p>Warm, tief, elegant.</p>
+              </article>
+              <article class="mini-card">
+                <h3>Fresh & Clean</h3>
+                <p>Leicht, modern, alltagstauglich.</p>
+              </article>
+              <article class="mini-card">
+                <h3>Floral</h3>
+                <p>Blumig, weich, zeitlos.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="kategorien" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Kategorien</h2>
+            <p class="muted">Wähle eine Kategorie und sortiere die Auswahl.</p>
+          </div>
+
+          <div class="filters" role="region" aria-label="Filter und Sortierung">
+            <div class="field">
+              <label for="categorySelect">Kategorie</label>
+              <select id="categorySelect" data-category-select>
+                <option value="all">Alle</option>
+                <option value="women">Women</option>
+                <option value="men">Men</option>
+                <option value="unisex">Unisex</option>
+                <option value="oud">Oud</option>
+                <option value="fresh">Fresh</option>
+                <option value="floral">Floral</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="sortSelect">Sortieren</label>
+              <select id="sortSelect" data-sort-select>
+                <option value="featured">Empfohlen</option>
+                <option value="name_asc">Name (A–Z)</option>
+                <option value="name_desc">Name (Z–A)</option>
+                <option value="price_asc">Preis (aufsteigend)</option>
+                <option value="price_desc">Preis (absteigend)</option>
+              </select>
+            </div>
+
+            <div class="field search">
+              <label for="searchInput">Suche</label>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="z.B. Oud, Vanilla, Fresh …"
+                autocomplete="off"
+                data-search
+              />
+            </div>
+          </div>
+
+          <div class="grid products" data-products aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="neuheiten" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Neuheiten</h2>
+            <p class="muted">Teaserbereich – hier kannst du später echte Releases ergänzen.</p>
+          </div>
+
+          <div class="grid news">
+            <article class="card">
+              <div class="card-media image-placeholder small">
+                <span>Foto</span>
+              </div>
+              <div class="card-body">
+                <h3>Neue Kollektion (Platzhalter)</h3>
+                <p class="muted">Kurzer Text zu Neuheiten, Aktionen oder limitierten Drops.</p>
+                <button class="btn btn-ghost" type="button" data-favorite-demo>Als Favorit speichern</button>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-media image-placeholder small">
+                <span>Foto</span>
+              </div>
+              <div class="card-body">
+                <h3>Exklusiver Duft (Platzhalter)</h3>
+                <p class="muted">Perfekt für Abend & Signature Scent – Details kannst du später ersetzen.</p>
+                <a class="btn btn-ghost" href="#newsletter">Update erhalten</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-media image-placeholder small">
+                <span>Foto</span>
+              </div>
+              <div class="card-body">
+                <h3>Limited Edition (Platzhalter)</h3>
+                <p class="muted">Kurzinfo inkl. Release-Datum, Menge oder Duftprofil.</p>
+                <a class="btn btn-ghost" href="./pages/rechtinformationen.html">Mehr Infos</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="newsletter" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Newsletter</h2>
+            <p class="muted">Erhalte E-Mails, wenn es Neuigkeiten, Drops oder Aktionen gibt.</p>
+          </div>
+
+          <div class="newsletter">
+            <form class="newsletter-form" data-newsletter-form>
+              <div class="field grow">
+                <label for="newsletterEmail">E-Mail</label>
+                <input id="newsletterEmail" name="email" type="email" placeholder="name@email.com" required />
+              </div>
+              <div class="field">
+                <label class="checkbox">
+                  <input type="checkbox" name="consent" required />
+                  <span>Ich möchte Updates von No.misk erhalten.</span>
+                </label>
+              </div>
+              <button class="btn" type="submit">Anmelden</button>
+            </form>
+            <p class="fineprint">
+              Hinweis: Diese Demo speichert Anmeldungen lokal im Browser (ohne Backend). Für echte E-Mails kannst du später
+              z.B. Mailchimp/Brevo o.ä. anbinden.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="social" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Social</h2>
+            <p class="muted">Thumbnails sind klickbar und führen direkt zu deinen Videos/Accounts (Links kannst du anpassen).</p>
+          </div>
+
+          <div class="grid social-grid">
+            <a class="social-card" href="#" target="_blank" rel="noreferrer" data-social="tiktok" aria-label="TikTok öffnen">
+              <div class="social-thumb image-placeholder small"><span>TikTok</span></div>
+              <div class="social-body">
+                <h3>TikTok</h3>
+                <p class="muted">@deinAccount</p>
+              </div>
+            </a>
+            <a
+              class="social-card"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              data-social="snapchat"
+              aria-label="Snapchat öffnen"
+            >
+              <div class="social-thumb image-placeholder small"><span>Snapchat</span></div>
+              <div class="social-body">
+                <h3>Snapchat</h3>
+                <p class="muted">@deinAccount</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontakt" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Kontakt & Öffnungszeiten</h2>
+            <p class="muted">Besuche No.misk in Linz oder ruf direkt an.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>Adresse</h3>
+              <p>Humboldtstraße 48<br />4020 Linz</p>
+
+              <h3>Telefon</h3>
+              <p><a href="tel:+4368181228794">0681 81228794</a></p>
+
+              <h3>Öffnungszeiten</h3>
+              <dl class="hours">
+                <div><dt>Montag</dt><dd>10:00–20:00</dd></div>
+                <div><dt>Dienstag</dt><dd>10:00–20:00</dd></div>
+                <div><dt>Mittwoch</dt><dd>10:00–20:00</dd></div>
+                <div><dt>Donnerstag</dt><dd>10:00–20:00</dd></div>
+                <div><dt>Freitag</dt><dd>10:00–20:00</dd></div>
+                <div><dt>Samstag</dt><dd>10:00–18:00</dd></div>
+                <div><dt>Sonntag</dt><dd>Geschlossen</dd></div>
+              </dl>
+
+              <p class="fineprint">
+                Auf Google Maps kannst du „Neue Öffnungszeiten vorschlagen“ (Hinweistext – Funktion liegt bei Google).
+              </p>
+            </div>
+
+            <div class="map-card" aria-label="Google Maps Karte">
+              <iframe
+                title="No.misk – Humboldtstraße 48, 4020 Linz"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Humboldtstra%C3%9Fe%2048%2C%204020%20Linz&output=embed"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand brand-footer">
+            <span class="brand-mark" aria-hidden="true">No</span><span class="brand-dot">.</span><span class="brand-name">misk</span>
+          </div>
+          <p class="muted">Parfümerie in Linz – Humboldtstraße 48, 4020 Linz</p>
+          <p class="muted">
+            Telefon: <a href="tel:+4368181228794">0681 81228794</a>
+          </p>
+        </div>
+
+        <div>
+          <h3>Rechtliches</h3>
+          <ul class="footer-links">
+            <li><a href="./pages/nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
+            <li><a href="./pages/datenschutz.html">Datenschutzerklärung</a></li>
+            <li><a href="./pages/rechtinformationen.html">Rechtinformationen</a></li>
+            <li><button class="linklike" type="button" data-open-cookie-settings>Cookie-Einstellungen</button></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Social</h3>
+          <ul class="footer-links">
+            <li><a href="#" target="_blank" rel="noreferrer" data-social="tiktok">TikTok</a></li>
+            <li><a href="#" target="_blank" rel="noreferrer" data-social="snapchat">Snapchat</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <small>© <span data-year></span> No.misk</small>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true" hidden data-toast></div>
+
+    <section class="cookie-banner" role="dialog" aria-label="Cookie Hinweis" aria-modal="true" hidden data-cookie-banner>
+      <div class="cookie-inner">
+        <h2>Cookies</h2>
+        <p class="muted">
+          Wir verwenden Cookies/Local Storage für Login-Status, Einstellungen und Favoriten (Demo). Du kannst entscheiden, ob du
+          alles akzeptierst oder nur notwendige Einstellungen erlaubst.
+        </p>
+        <div class="cookie-actions">
+          <button class="btn btn-ghost" type="button" data-cookie-necessary>Nur notwendig</button>
+          <button class="btn" type="button" data-cookie-accept>Akzeptieren</button>
+        </div>
+        <p class="fineprint">
+          Mehr Infos in der <a href="./pages/datenschutz.html">Datenschutzerklärung</a>.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
