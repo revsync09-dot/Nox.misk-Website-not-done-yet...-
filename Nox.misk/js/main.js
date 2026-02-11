@@ -9,8 +9,8 @@ const STORAGE = {
 };
 
 const SOCIAL_LINKS = {
-  tiktok: "https://www.tiktok.com", // TODO: Ersetze mit deinem TikTok Link (Profil oder Video)
-  snapchat: "https://www.snapchat.com", // TODO: Ersetze mit deinem Snapchat Link
+  tiktok: "https://www.tiktok.com", 
+  snapchat: "https://www.snapchat.com", 
 };
 
 const PRODUCTS = [
